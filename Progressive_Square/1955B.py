@@ -1,5 +1,7 @@
 # https://codeforces.com/problemset/problem/1955/B
 
+import pprint as pp
+
 def get_input() -> list:
     tests = int(input())
     inputs = []
@@ -41,9 +43,10 @@ def check(a: list, b: list):
     return "YES"
 
 inp = get_input()
+pp.pprint(inp)
 for n, c, d, arr in inp:
     arr.sort()
     b = create_progressive_square(n, arr[0], c, d)
     res = check(arr, b)
-    print(res)
+    #print(res)
 
